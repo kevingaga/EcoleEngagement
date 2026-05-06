@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ecole-de-lengagement.vercel.app/sitemap.xml

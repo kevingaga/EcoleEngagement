@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page introuvable — École de l'engagement</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,900;1,9..144,400&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --rouge: #B8232A;
+    --crème: #F4EFE6;
+    --noir: #1A1411;
+    --or: #C8A24A;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter Tight', sans-serif;
+    background: var(--crème);
+    color: var(--noir);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+  }
+  .container { max-width: 600px; }
+  .num {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: clamp(7rem, 20vw, 12rem);
+    line-height: 1;
+    color: var(--rouge);
+    letter-spacing: -0.05em;
+    margin-bottom: 1rem;
+  }
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+  }
+  h1 em { color: var(--rouge); font-style: italic; font-weight: 400; }
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+    color: #2D2520;
+    line-height: 1.6;
+  }
+  a {
+    background: var(--noir);
+    color: var(--crème);
+    padding: 1.1rem 2rem;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 2px;
+    display: inline-block;
+    transition: all 0.25s;
+    border: 2px solid var(--noir);
+  }
+  a:hover {
+    background: var(--rouge);
+    border-color: var(--rouge);
+    transform: translateY(-2px);
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="num">404</div>
+    <h1>Cette page <em>s'est égarée</em>.</h1>
+    <p>La page que vous cherchez n'existe pas ou a été déplacée. Mais l'engagement, lui, est toujours là.</p>
+    <a href="/">← Retour à l'accueil</a>
+  </div>
+</body>
+</html>

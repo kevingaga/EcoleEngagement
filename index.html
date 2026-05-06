@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>École de l'engagement — Former celles et ceux qui feront la politique de demain</title>
+<meta name="description" content="L'École de l'engagement forme gratuitement des citoyennes et citoyens issus des classes populaires à l'engagement politique, syndical et associatif.">
+<meta name="theme-color" content="#B8232A">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="École de l'engagement">
+<meta property="og:description" content="Former celles et ceux qui feront la politique de demain. Une formation gratuite, exigeante, ancrée à gauche.">
+<meta property="og:image" content="/images/promo-portique.jpg">
+<meta property="og:locale" content="fr_FR">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="École de l'engagement">
+<meta name="twitter:description" content="Former celles et ceux qui feront la politique de demain.">
+<meta name="twitter:image" content="/images/promo-portique.jpg">
+
+<!-- Favicon SVG inline (lettre É rouge sur fond crème) -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23B8232A'/%3E%3Ctext x='50' y='72' font-family='Georgia,serif' font-size='72' font-weight='900' fill='%23F4EFE6' text-anchor='middle'%3EÉ%3C/text%3E%3C/svg%3E">
+
+<!-- JSON-LD pour le SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "name": "École de l'engagement",
+  "description": "Association loi 1901 qui forme gratuitement les citoyennes et citoyens issus des classes populaires à l'engagement politique, syndical et associatif.",
+  "foundingDate": "2020",
+  "areaServed": "FR",
+  "sameAs": [
+    "https://www.facebook.com/share/1A79DbhSu8/"
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,400&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --rouge: #B8232A;
+    --rouge-fonce: #8E1A20;
+    --crème: #F4EFE6;
+    --crème-fonce: #E8DFD0;
+    --noir: #1A1411;
+    --noir-doux: #2D2520;
+    --or: #C8A24A;
+    --bleu: #2C3E5C;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter Tight', sans-serif;
+    background: var(--crème);
+    color: var(--noir);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  ::selection { background: var(--rouge); color: var(--crème); }
+
+  /* ============ GRAIN OVERLAY ============ */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* ============ NAVIGATION ============ */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 1.2rem 2.5rem;
+    background: rgba(244, 239, 230, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(26, 20, 17, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 1.3rem;
+    letter-spacing: -0.02em;
+    color: var(--noir);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .logo-mark {
+    width: 36px;
+    height: 36px;
+    background: var(--rouge);
+    color: var(--crème);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 1.1rem;
+    border-radius: 2px;
+    transform: rotate(-3deg);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.2rem;
+    list-style: none;
+    align-items: center;
+  }
+
+  .nav-links a {
+    color: var(--noir);
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 500;
+    transition: color 0.3s;
+    position: relative;
+  }
+
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--rouge);
+    transition: width 0.3s;
+  }
+
+  .nav-links a:hover::after { width: 100%; }
+
+  .nav-cta {
+    background: var(--rouge);
+    color: var(--crème) !important;
+    padding: 0.65rem 1.3rem;
+    border-radius: 2px;
+    font-weight: 600;
+    transition: transform 0.2s, background 0.2s;
+  }
+
+  .nav-cta:hover { background: var(--rouge-fonce); transform: translateY(-1px); }
+  .nav-cta::after { display: none; }
+
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: var(--noir);
+    font-size: 1.5rem;
+  }
+
+  /* ============ HERO ============ */
+  .hero {
+    min-height: 100vh;
+    padding: 8rem 2.5rem 4rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 45%;
+    height: 100%;
+    background: var(--rouge);
+    clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
+    opacity: 0.95;
+    z-index: 0;
+  }
+
+  .hero-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-eyebrow {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--rouge);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--rouge);
+  }
+
+  .hero h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: clamp(2.8rem, 6.5vw, 5.5rem);
+    line-height: 0.98;
+    letter-spacing: -0.035em;
+    color: var(--noir);
+    margin-bottom: 2rem;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--rouge);
+    font-weight: 400;
+  }
+
+  .hero h1 .underline {
+    background: linear-gradient(transparent 70%, var(--or) 70%);
+    padding: 0 0.1em;
+  }
+
+  .hero-lede {
+    font-size: 1.15rem;
+    line-height: 1.65;
+    max-width: 540px;
+    color: var(--noir-doux);
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-cta-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .btn-primary {
+    background: var(--noir);
+    color: var(--crème);
+    padding: 1.1rem 2rem;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 2px;
+    transition: all 0.25s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    border: 2px solid var(--noir);
+  }
+
+  .btn-primary:hover {
+    background: var(--rouge);
+    border-color: var(--rouge);
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--noir);
+    padding: 1.1rem 2rem;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: 2px solid var(--noir);
+    border-radius: 2px;
+    transition: all 0.25s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .btn-secondary:hover {
+    background: var(--noir);
+    color: var(--crème);
+  }
+
+  .hero-visual {
+    position: relative;
+    height: 540px;
+  }
+
+  .hero-img-main {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 90%;
+    height: 70%;
+    object-fit: cover;
+    border-radius: 2px;
+    box-shadow: -20px 20px 0 var(--noir);
+    filter: contrast(1.05) saturate(1.1);
+  }
+
+  .hero-img-secondary {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 2px;
+    box-shadow: 15px 15px 0 var(--or);
+    filter: contrast(1.05);
+  }
+
+  .hero-stamp {
+    position: absolute;
+    top: -20px;
+    left: -30px;
+    width: 130px;
+    height: 130px;
+    background: var(--or);
+    color: var(--noir);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    line-height: 1.2;
+    transform: rotate(-12deg);
+    z-index: 3;
+    padding: 1rem;
+    border: 2px dashed var(--noir);
+  }
+
+  /* ============ MARQUEE ============ */
+  .marquee {
+    background: var(--noir);
+    color: var(--crème);
+    padding: 1.2rem 0;
+    overflow: hidden;
+    border-top: 4px solid var(--rouge);
+    border-bottom: 4px solid var(--rouge);
+  }
+
+  .marquee-track {
+    display: flex;
+    gap: 3rem;
+    animation: scroll 35s linear infinite;
+    white-space: nowrap;
+  }
+
+  .marquee-track span {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 1.4rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .marquee-track span::after {
+    content: '★';
+    color: var(--rouge);
+    font-style: normal;
+  }
+
+  @keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* ============ SECTIONS GENERAL ============ */
+  section {
+    padding: 6rem 2.5rem;
+    position: relative;
+  }
+
+  .container {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+
+  .section-header {
+    margin-bottom: 4rem;
+    max-width: 800px;
+  }
+
+  .section-eyebrow {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--rouge);
+    margin-bottom: 1rem;
+  }
+
+  .section-title {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    color: var(--noir);
+    margin-bottom: 1.5rem;
+  }
+
+  .section-title em {
+    font-style: italic;
+    color: var(--rouge);
+    font-weight: 400;
+  }
+
+  .section-lede {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--noir-doux);
+  }
+
+  /* ============ MISSION ============ */
+  .mission {
+    background: var(--crème);
+    border-bottom: 1px solid rgba(26, 20, 17, 0.1);
+  }
+
+  .mission-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .pillar {
+    padding: 2.5rem 2rem;
+    background: var(--crème-fonce);
+    border-left: 4px solid var(--rouge);
+    transition: transform 0.3s, background 0.3s;
+  }
+
+  .pillar:hover {
+    transform: translateY(-6px);
+    background: var(--noir);
+    color: var(--crème);
+  }
+
+  .pillar:hover .pillar-num { color: var(--or); }
+  .pillar:hover h3 { color: var(--crème); }
+
+  .pillar-num {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 3rem;
+    color: var(--rouge);
+    line-height: 1;
+    margin-bottom: 1rem;
+    transition: color 0.3s;
+  }
+
+  .pillar h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    transition: color 0.3s;
+  }
+
+  .pillar p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  /* ============ STATS ============ */
+  .stats {
+    background: var(--noir);
+    color: var(--crème);
+    padding: 5rem 2.5rem;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    text-align: left;
+  }
+
+  .stat {
+    border-left: 3px solid var(--rouge);
+    padding-left: 1.5rem;
+  }
+
+  .stat-num {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1;
+    color: var(--crème);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.04em;
+  }
+
+  .stat-label {
+    font-size: 0.92rem;
+    color: var(--crème-fonce);
+    line-height: 1.4;
+  }
+
+  /* ============ FORMATION ============ */
+  .formation {
+    background: var(--crème);
+  }
+
+  .formation-content {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .formation-list {
+    list-style: none;
+  }
+
+  .formation-list li {
+    padding: 1.8rem 0;
+    border-bottom: 1px solid rgba(26, 20, 17, 0.15);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  .formation-list li:last-child { border-bottom: none; }
+
+  .formation-icon {
+    width: 44px;
+    height: 44px;
+    background: var(--rouge);
+    color: var(--crème);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .formation-list h4 {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .formation-list p {
+    font-size: 0.95rem;
+    color: var(--noir-doux);
+    line-height: 1.55;
+  }
+
+  .formation-quote {
+    background: var(--noir);
+    color: var(--crème);
+    padding: 3rem 2.5rem;
+    position: relative;
+    border-radius: 2px;
+  }
+
+  .formation-quote::before {
+    content: '"';
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    font-family: 'Fraunces', serif;
+    font-size: 8rem;
+    color: var(--rouge);
+    line-height: 1;
+  }
+
+  .formation-quote blockquote {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 1.45rem;
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .formation-quote cite {
+    font-style: normal;
+    font-size: 0.9rem;
+    color: var(--or);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  /* ============ PROMOS ============ */
+  .promos {
+    background: var(--crème-fonce);
+  }
+
+  .promo-gallery {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .promo-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+
+  .promo-card:hover { transform: scale(1.02); }
+
+  .promo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s, filter 0.4s;
+    filter: contrast(1.05) saturate(1.05);
+  }
+
+  .promo-card:hover img { transform: scale(1.06); }
+
+  .promo-card-1 {
+    grid-column: span 7;
+    grid-row: span 2;
+    height: 540px;
+  }
+
+  .promo-card-2 {
+    grid-column: span 5;
+    height: 260px;
+  }
+
+  .promo-card-3 {
+    grid-column: span 5;
+    height: 260px;
+  }
+
+  .promo-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem 1.8rem 1.5rem;
+    background: linear-gradient(transparent, rgba(26, 20, 17, 0.95));
+    color: var(--crème);
+  }
+
+  .promo-overlay-tag {
+    display: inline-block;
+    background: var(--rouge);
+    color: var(--crème);
+    padding: 0.3rem 0.75rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+    border-radius: 2px;
+  }
+
+  .promo-overlay h4 {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    line-height: 1.2;
+  }
+
+  .promo-card-1 .promo-overlay h4 { font-size: 1.7rem; }
+
+  /* ============ DON ============ */
+  .don {
+    background: var(--rouge);
+    color: var(--crème);
+    overflow: hidden;
+    position: relative;
+  }
+
+  .don::before {
+    content: '✊';
+    position: absolute;
+    right: -5%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 25rem;
+    opacity: 0.06;
+    line-height: 1;
+  }
+
+  .don-content {
+    max-width: 900px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .don .section-eyebrow {
+    color: var(--or);
+  }
+
+  .don .section-title {
+    color: var(--crème);
+  }
+
+  .don .section-title em {
+    color: var(--or);
+  }
+
+  .don p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    max-width: 680px;
+  }
+
+  .don-cta {
+    background: var(--crème);
+    color: var(--rouge);
+    padding: 1.3rem 2.5rem;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.05rem;
+    border-radius: 2px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    transition: all 0.3s;
+    border: 3px solid var(--crème);
+  }
+
+  .don-cta:hover {
+    background: var(--noir);
+    color: var(--crème);
+    border-color: var(--noir);
+    transform: translateY(-2px);
+  }
+
+  .don-amounts {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+  }
+
+  .don-amount {
+    background: rgba(244, 239, 230, 0.12);
+    border: 2px solid rgba(244, 239, 230, 0.3);
+    padding: 1.2rem 1.5rem;
+    text-align: left;
+    flex: 1;
+    min-width: 180px;
+    border-radius: 2px;
+  }
+
+  .don-amount-num {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 2rem;
+    color: var(--or);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .don-amount p {
+    font-size: 0.85rem;
+    margin: 0;
+    color: var(--crème);
+    line-height: 1.4;
+  }
+
+  /* ============ REJOINDRE ============ */
+  .rejoindre {
+    background: var(--crème);
+    text-align: center;
+  }
+
+  .rejoindre-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .rejoindre .section-title {
+    margin-bottom: 1.5rem;
+  }
+
+  .rejoindre p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: var(--noir-doux);
+    margin-bottom: 2.5rem;
+  }
+
+  /* ============ FOOTER ============ */
+  footer {
+    background: var(--noir);
+    color: var(--crème);
+    padding: 4rem 2.5rem 2rem;
+  }
+
+  .footer-grid {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .footer-brand h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+  }
+
+  .footer-brand p {
+    font-size: 0.92rem;
+    color: var(--crème-fonce);
+    line-height: 1.6;
+    max-width: 320px;
+  }
+
+  .footer-col h4 {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+    color: var(--or);
+    letter-spacing: 0.02em;
+  }
+
+  .footer-col ul {
+    list-style: none;
+  }
+
+  .footer-col ul li {
+    margin-bottom: 0.7rem;
+  }
+
+  .footer-col a {
+    color: var(--crème-fonce);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+  }
+
+  .footer-col a:hover { color: var(--rouge); }
+
+  .footer-bottom {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(244, 239, 230, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.85rem;
+    color: var(--crème-fonce);
+  }
+
+  /* ============ ANIMATIONS ============ */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width: 968px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+    .nav-links.open {
+      display: flex;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--crème);
+      flex-direction: column;
+      padding: 2rem;
+      gap: 1.5rem;
+      border-bottom: 1px solid rgba(26, 20, 17, 0.1);
+    }
+    .hamburger { display: block; }
+
+    .hero { padding: 7rem 1.5rem 3rem; }
+    .hero::before { width: 100%; clip-path: none; opacity: 0.15; }
+    .hero-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .hero-visual { height: 400px; }
+    .hero-stamp { width: 100px; height: 100px; font-size: 0.75rem; }
+
+    section { padding: 4rem 1.5rem; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+    .mission-grid { grid-template-columns: 1fr; }
+    .formation-content { grid-template-columns: 1fr; gap: 3rem; }
+
+    .promo-gallery { grid-template-columns: 1fr; }
+    .promo-card-1, .promo-card-2, .promo-card-3 {
+      grid-column: span 1;
+      height: 320px;
+    }
+    .promo-card-1 { grid-row: span 1; }
+
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .footer-bottom { flex-direction: column; text-align: center; }
+
+    .hero-cta-group { flex-direction: column; align-items: stretch; }
+    .btn-primary, .btn-secondary { justify-content: center; }
+  }
+
+  @media (max-width: 540px) {
+    .footer-grid { grid-template-columns: 1fr; }
+    .stats-grid { grid-template-columns: 1fr; }
+    .don-amounts { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ NAVIGATION ============ -->
+<nav>
+  <a href="#" class="logo">
+    <span class="logo-mark">É</span>
+    École de l'engagement
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#mission">Mission</a></li>
+    <li><a href="#formation">Formation</a></li>
+    <li><a href="#promos">Promotions</a></li>
+    <li><a href="#don">Soutenir</a></li>
+    <li><a href="#rejoindre" class="nav-cta">Candidater</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-grid">
+    <div class="hero-text">
+      <span class="hero-eyebrow">Association loi 1901 — Depuis 2020</span>
+      <h1>
+        Former <em>celles</em> et <em>ceux</em> qui feront la <span class="underline">politique de demain</span>.
+      </h1>
+      <p class="hero-lede">
+        L'École de l'engagement donne aux citoyennes et citoyens issus des classes populaires les clés pour s'engager dans la vie politique, syndicale et associative. Une formation gratuite, exigeante, et résolument ancrée à gauche.
+      </p>
+      <div class="hero-cta-group">
+        <a href="#rejoindre" class="btn-primary">
+          Rejoindre une promotion →
+        </a>
+        <a href="#don" class="btn-secondary">
+          Soutenir l'école
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-stamp">
+        Parité<br>populaire<br>★ 50/50 ★
+      </div>
+      <img src="images/promo-portique.jpg" alt="Promotion de l'École de l'engagement" class="hero-img-main">
+      <img src="images/promo-paris.jpg" alt="Séminaire à Paris" class="hero-img-secondary">
+    </div>
+  </div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>Des vrais gens pour la France</span>
+    <span>Donner le pouvoir aux classes populaires</span>
+    <span>Une école, pas une chapelle</span>
+    <span>70 heures de formation gratuite</span>
+    <span>Des vrais gens pour la France</span>
+    <span>Donner le pouvoir aux classes populaires</span>
+    <span>Une école, pas une chapelle</span>
+    <span>70 heures de formation gratuite</span>
+  </div>
+</div>
+
+<!-- ============ MISSION ============ -->
+<section class="mission" id="mission">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">Notre mission</span>
+      <h2 class="section-title">
+        80% des député·es sont des cadres.<br>
+        <em>Pas nous.</em>
+      </h2>
+      <p class="section-lede">
+        Quand 80% des Français·es ne le sont pas, il y a un problème de représentation. L'École de l'engagement existe pour qu'employé·es, ouvrier·ères, agent·es de service, infirmier·ères, artisan·es puissent enfin prendre toute leur place dans la vie publique.
+      </p>
+    </div>
+
+    <div class="mission-grid">
+      <div class="pillar reveal">
+        <div class="pillar-num">01</div>
+        <h3>Renouveler la représentation</h3>
+        <p>Donner aux classes populaires les outils pour briguer un mandat ou animer un collectif. La parité femme-homme, la parité populaire.</p>
+      </div>
+      <div class="pillar reveal">
+        <div class="pillar-num">02</div>
+        <h3>Transmettre des savoirs</h3>
+        <p>Histoire des institutions, finances publiques, écologie, droit constitutionnel, mécanique d'une campagne. Tout ce qu'on n'apprend pas à l'école quand on n'est pas du sérail.</p>
+      </div>
+      <div class="pillar reveal">
+        <div class="pillar-num">03</div>
+        <h3>Construire un réseau</h3>
+        <p>Une promotion, c'est un collectif. Des camarades de combat, un soutien dans la durée, des liens qui irriguent les territoires bien après la fin des cours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat reveal">
+        <div class="stat-num">70h</div>
+        <div class="stat-label">de formation par promotion, gratuites pour tou·tes les élèves</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat-num">30</div>
+        <div class="stat-label">élèves par promotion — 15 femmes, 15 hommes</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">des frais de déplacement et d'hébergement pris en charge</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat-num">2020</div>
+        <div class="stat-label">année de création de l'association</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FORMATION ============ -->
+<section class="formation" id="formation">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">Le programme</span>
+      <h2 class="section-title">
+        Une formation <em>complète</em>, gratuite et exigeante.
+      </h2>
+    </div>
+
+    <div class="formation-content">
+      <ul class="formation-list">
+        <li class="reveal">
+          <div class="formation-icon">I</div>
+          <div>
+            <h4>Savoirs fondamentaux</h4>
+            <p>Histoire politique, idées politiques, économie, relations internationales, écologie, esprit critique. Le socle pour penser et débattre.</p>
+          </div>
+        </li>
+        <li class="reveal">
+          <div class="formation-icon">II</div>
+          <div>
+            <h4>Connaissances techniques</h4>
+            <p>Finances publiques, droit constitutionnel, organisation des collectivités, fonctionnement des institutions. Pour exercer un mandat sans dépendre des cabinets.</p>
+          </div>
+        </li>
+        <li class="reveal">
+          <div class="formation-icon">III</div>
+          <div>
+            <h4>Savoir-faire pratiques</h4>
+            <p>Gestion de projet, prise de parole, organisation d'une campagne électorale, théâtre, débats mouvants. La politique se pratique autant qu'elle se pense.</p>
+          </div>
+        </li>
+        <li class="reveal">
+          <div class="formation-icon">IV</div>
+          <div>
+            <h4>Deux week-ends en présentiel</h4>
+            <p>Les promotions se retrouvent à Montpellier et à Paris pour des séminaires intensifs. Travaux de groupe, rencontres, convivialité, construction du collectif.</p>
+          </div>
+        </li>
+      </ul>
+
+      <div class="formation-quote reveal">
+        <blockquote>
+          La politique ne doit pas être réservée à celles et ceux qui ont eu la chance d'y être préparé·es. C'est pour ça que cette école existe.
+        </blockquote>
+        <cite>— L'équipe pédagogique</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROMOS ============ -->
+<section class="promos" id="promos">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">Galerie</span>
+      <h2 class="section-title">
+        Les <em>visages</em> de l'engagement.
+      </h2>
+      <p class="section-lede">
+        Chaque promotion est une aventure humaine. Voici quelques moments forts vécus par celles et ceux qui sont passé·es par l'École.
+      </p>
+    </div>
+
+    <div class="promo-gallery">
+      <div class="promo-card promo-card-1 reveal">
+        <img src="images/promo-portique.jpg" alt="Promotion devant un monument">
+        <div class="promo-overlay">
+          <span class="promo-overlay-tag">Promotion en visite</span>
+          <h4>L'engagement, ça se vit ensemble</h4>
+        </div>
+      </div>
+      <div class="promo-card promo-card-2 reveal">
+        <img src="images/promo-batiment.jpg" alt="Séminaire de promotion">
+        <div class="promo-overlay">
+          <span class="promo-overlay-tag">Séminaire d'été</span>
+          <h4>Rentrée en présentiel</h4>
+        </div>
+      </div>
+      <div class="promo-card promo-card-3 reveal">
+        <img src="images/promo-paris.jpg" alt="Week-end de séminaire à Paris">
+        <div class="promo-overlay">
+          <span class="promo-overlay-tag">Week-end à Paris</span>
+          <h4>Deux week-ends de séminaire, à Montpellier et à Paris</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DON ============ -->
+<section class="don" id="don">
+  <div class="container">
+    <div class="don-content reveal">
+      <span class="section-eyebrow">Soutenir l'école</span>
+      <h2 class="section-title">
+        La formation est <em>gratuite</em>.<br>
+        Mais elle a un coût.
+      </h2>
+      <p>
+        Frais de transport, d'hébergement, production de contenus pédagogiques, intervenant·es, location de salles. L'École de l'engagement ne reçoit aucune subvention partisane et ne fait payer aucun élève. Votre don rend possible chaque promotion.
+      </p>
+
+      <div class="don-amounts">
+        <div class="don-amount">
+          <div class="don-amount-num">25 €</div>
+          <p>Un repas pour un·e élève en séminaire</p>
+        </div>
+        <div class="don-amount">
+          <div class="don-amount-num">80 €</div>
+          <p>Un trajet en train pour rejoindre un week-end</p>
+        </div>
+        <div class="don-amount">
+          <div class="don-amount-num">200 €</div>
+          <p>Une heure de formation par un·e intervenant·e</p>
+        </div>
+      </div>
+
+      <a href="https://docs.google.com/" target="_blank" rel="noopener" class="don-cta">
+        Faire un don maintenant →
+      </a>
+      <p style="margin-top:1rem;font-size:0.85rem;opacity:0.85;">
+        Don déductible à 66% de l'impôt sur le revenu — reçu fiscal envoyé.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REJOINDRE ============ -->
+<section class="rejoindre" id="rejoindre">
+  <div class="container">
+    <div class="rejoindre-content reveal">
+      <span class="section-eyebrow">Candidater</span>
+      <h2 class="section-title">
+        Et si la prochaine promotion, <em>c'était vous</em> ?
+      </h2>
+      <p>
+        Vous êtes employé·e, ouvrier·ère, artisan·e, agent·e de service, infirmier·ère, professeur·e, demandeur·euse d'emploi, retraité·e ? Vous voulez vous engager mais ne savez pas par où commencer ? Cette école est faite pour vous. Envoyez-nous quelques mots sur vous, votre histoire, et pourquoi l'engagement vous appelle.
+      </p>
+      <a href="#" class="btn-primary">Envoyer ma candidature →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <h3>École de l'engagement</h3>
+      <p>Association loi 1901 indépendante de tout parti politique. Former les classes populaires à l'engagement civique, syndical et politique.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Naviguer</h4>
+      <ul>
+        <li><a href="#mission">Notre mission</a></li>
+        <li><a href="#formation">Le programme</a></li>
+        <li><a href="#promos">Les promotions</a></li>
+        <li><a href="#rejoindre">Candidater</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Soutenir</h4>
+      <ul>
+        <li><a href="#don">Faire un don</a></li>
+        <li><a href="#">Devenir bénévole</a></li>
+        <li><a href="#">Donner un cours</a></li>
+        <li><a href="#">Mécénat d'entreprise</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Suivre</h4>
+      <ul>
+        <li><a href="https://www.facebook.com/share/1A79DbhSu8/" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="#" target="_blank" rel="noopener">Twitter / X</a></li>
+        <li><a href="#" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="mailto:contact@ecole-de-lengagement.fr">Nous écrire</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 École de l'engagement — Tous droits réservés</span>
+    <span>Mentions légales · Politique de confidentialité</span>
+  </div>
+</footer>
+
+<script>
+  // Menu mobile
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+  });
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => navLinks.classList.remove('open'));
+  });
+
+  // Reveal au scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
