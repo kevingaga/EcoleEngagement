@@ -6,19 +6,23 @@
 <title>École de l'engagement — Former celles et ceux qui feront la politique de demain</title>
 <meta name="description" content="L'École de l'engagement forme gratuitement des citoyennes et citoyens issus des classes populaires à l'engagement politique, syndical et associatif.">
 <meta name="theme-color" content="#B8232A">
+<link rel="canonical" href="https://ecole-de-lengagement.vercel.app/">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://ecole-de-lengagement.vercel.app/">
 <meta property="og:title" content="École de l'engagement">
 <meta property="og:description" content="Former celles et ceux qui feront la politique de demain. Une formation gratuite, exigeante, ancrée à gauche.">
-<meta property="og:image" content="/images/promo-portique.jpg">
+<meta property="og:image" content="https://ecole-de-lengagement.vercel.app/images/promo-portique.jpg">
+<meta property="og:image:width" content="833">
+<meta property="og:image:height" content="483">
 <meta property="og:locale" content="fr_FR">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="École de l'engagement">
 <meta name="twitter:description" content="Former celles et ceux qui feront la politique de demain.">
-<meta name="twitter:image" content="/images/promo-portique.jpg">
+<meta name="twitter:image" content="https://ecole-de-lengagement.vercel.app/images/promo-portique.jpg">
 
 <!-- Favicon SVG inline (lettre É rouge sur fond crème) -->
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23B8232A'/%3E%3Ctext x='50' y='72' font-family='Georgia,serif' font-size='72' font-weight='900' fill='%23F4EFE6' text-anchor='middle'%3EÉ%3C/text%3E%3C/svg%3E">
@@ -29,11 +33,15 @@
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
   "name": "École de l'engagement",
+  "url": "https://ecole-de-lengagement.vercel.app/",
+  "logo": "https://ecole-de-lengagement.vercel.app/images/promo-portique.jpg",
   "description": "Association loi 1901 qui forme gratuitement les citoyennes et citoyens issus des classes populaires à l'engagement politique, syndical et associatif.",
   "foundingDate": "2020",
   "areaServed": "FR",
+  "email": "contact@ecole-de-lengagement.fr",
   "sameAs": [
-    "https://www.facebook.com/share/1A79DbhSu8/"
+    "https://www.facebook.com/share/1A79DbhSu8/",
+    "https://www.instagram.com/ecole_engagement/"
   ]
 }
 </script>
@@ -662,6 +670,11 @@
     height: 260px;
   }
 
+  .promo-card-4 {
+    grid-column: span 12;
+    height: 650px;
+  }
+
   .promo-overlay {
     position: absolute;
     bottom: 0;
@@ -928,11 +941,12 @@
     .formation-content { grid-template-columns: 1fr; gap: 3rem; }
 
     .promo-gallery { grid-template-columns: 1fr; }
-    .promo-card-1, .promo-card-2, .promo-card-3 {
+    .promo-card-1, .promo-card-2, .promo-card-3, .promo-card-4 {
       grid-column: span 1;
       height: 320px;
     }
     .promo-card-1 { grid-row: span 1; }
+    .promo-card-4 { height: 420px; }
 
     .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
     .footer-bottom { flex-direction: column; text-align: center; }
@@ -991,8 +1005,8 @@
       <div class="hero-stamp">
         Parité<br>populaire<br>★ 50/50 ★
       </div>
-      <img src="images/promo-portique.jpg" alt="Promotion de l'École de l'engagement" class="hero-img-main">
-      <img src="images/promo-paris.jpg" alt="Séminaire à Paris" class="hero-img-secondary">
+      <img src="images/promo-portique.jpg" alt="Promotion de l'École de l'engagement" class="hero-img-main" width="833" height="483" fetchpriority="high">
+      <img src="images/promo-paris.jpg" alt="Séminaire à Paris" class="hero-img-secondary" width="1100" height="1100">
     </div>
   </div>
 </section>
@@ -1002,11 +1016,11 @@
   <div class="marquee-track">
     <span>Des vrais gens pour la France</span>
     <span>Donner le pouvoir aux classes populaires</span>
-    <span>Une école, pas une chapelle</span>
+    <span>Une école, plusieurs opinions</span>
     <span>70 heures de formation gratuite</span>
     <span>Des vrais gens pour la France</span>
     <span>Donner le pouvoir aux classes populaires</span>
-    <span>Une école, pas une chapelle</span>
+    <span>Une école, plusieurs opinions</span>
     <span>70 heures de formation gratuite</span>
   </div>
 </div>
@@ -1034,12 +1048,12 @@
       <div class="pillar reveal">
         <div class="pillar-num">02</div>
         <h3>Transmettre des savoirs</h3>
-        <p>Histoire des institutions, finances publiques, écologie, droit constitutionnel, mécanique d'une campagne. Tout ce qu'on n'apprend pas à l'école quand on n'est pas du sérail.</p>
+        <p>Histoire des institutions, finances publiques, écologie, droit constitutionnel, mécanique d'une campagne. Tout ce qu'on n'apprend pas à l'école quand on n'est pas du milieu.</p>
       </div>
       <div class="pillar reveal">
         <div class="pillar-num">03</div>
         <h3>Construire un réseau</h3>
-        <p>Une promotion, c'est un collectif. Des camarades de combat, un soutien dans la durée, des liens qui irriguent les territoires bien après la fin des cours.</p>
+        <p>Une promotion, c'est un collectif. Des camarades de lutte, un soutien dans la durée, des liens qui irriguent les territoires bien après la fin des cours.</p>
       </div>
     </div>
   </div>
@@ -1136,24 +1150,31 @@
 
     <div class="promo-gallery">
       <div class="promo-card promo-card-1 reveal">
-        <img src="images/promo-portique.jpg" alt="Promotion devant un monument">
+        <img src="images/promo-portique.jpg" alt="Promotion devant un monument" width="833" height="483" loading="lazy">
         <div class="promo-overlay">
           <span class="promo-overlay-tag">Promotion en visite</span>
           <h4>L'engagement, ça se vit ensemble</h4>
         </div>
       </div>
       <div class="promo-card promo-card-2 reveal">
-        <img src="images/promo-batiment.jpg" alt="Séminaire de promotion">
+        <img src="images/promo-batiment.jpg" alt="Séminaire de promotion" width="960" height="720" loading="lazy">
         <div class="promo-overlay">
           <span class="promo-overlay-tag">Séminaire d'été</span>
           <h4>Rentrée en présentiel</h4>
         </div>
       </div>
       <div class="promo-card promo-card-3 reveal">
-        <img src="images/promo-paris.jpg" alt="Week-end de séminaire à Paris">
+        <img src="images/promo-paris.jpg" alt="Week-end de séminaire à Paris" width="1100" height="1100" loading="lazy">
         <div class="promo-overlay">
           <span class="promo-overlay-tag">Week-end à Paris</span>
           <h4>Deux week-ends de séminaire, à Montpellier et à Paris</h4>
+        </div>
+      </div>
+      <div class="promo-card promo-card-4 reveal">
+        <img src="images/promo-3.jpeg" alt="Promotion 3 de l'École de l'engagement" width="1100" height="733" loading="lazy">
+        <div class="promo-overlay">
+          <span class="promo-overlay-tag">Promotion 3</span>
+          <h4>La troisième promotion réunie</h4>
         </div>
       </div>
     </div>
@@ -1175,20 +1196,20 @@
 
       <div class="don-amounts">
         <div class="don-amount">
-          <div class="don-amount-num">25 €</div>
-          <p>Un repas pour un·e élève en séminaire</p>
+          <div class="don-amount-num">20 €</div>
+          <p>Des supports de cours pour un·e élève</p>
         </div>
         <div class="don-amount">
-          <div class="don-amount-num">80 €</div>
-          <p>Un trajet en train pour rejoindre un week-end</p>
+          <div class="don-amount-num">100 €</div>
+          <p>Hébergement pour 2 élèves</p>
         </div>
         <div class="don-amount">
-          <div class="don-amount-num">200 €</div>
-          <p>Une heure de formation par un·e intervenant·e</p>
+          <div class="don-amount-num">500 €</div>
+          <p>La scolarité d'un·e élève intégralement financée</p>
         </div>
       </div>
 
-      <a href="https://docs.google.com/" target="_blank" rel="noopener" class="don-cta">
+      <a href="https://www.helloasso.com/associations/ecole-de-l-engagement" target="_blank" rel="noopener" class="don-cta">
         Faire un don maintenant →
       </a>
       <p style="margin-top:1rem;font-size:0.85rem;opacity:0.85;">
@@ -1209,7 +1230,7 @@
       <p>
         Vous êtes employé·e, ouvrier·ère, artisan·e, agent·e de service, infirmier·ère, professeur·e, demandeur·euse d'emploi, retraité·e ? Vous voulez vous engager mais ne savez pas par où commencer ? Cette école est faite pour vous. Envoyez-nous quelques mots sur vous, votre histoire, et pourquoi l'engagement vous appelle.
       </p>
-      <a href="#" class="btn-primary">Envoyer ma candidature →</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSefUV3sikSvh8P7gfHYVXej9WxJWKEvErpgp3sSI2TXGjKU5w/viewform" target="_blank" rel="noopener" class="btn-primary">Envoyer ma candidature →</a>
     </div>
   </div>
 </section>
@@ -1234,24 +1255,21 @@
       <h4>Soutenir</h4>
       <ul>
         <li><a href="#don">Faire un don</a></li>
-        <li><a href="#">Devenir bénévole</a></li>
-        <li><a href="#">Donner un cours</a></li>
-        <li><a href="#">Mécénat d'entreprise</a></li>
+        <li><a href="mailto:contact@ecole-de-lengagement.fr">Devenir bénévole</a></li>
+        <li><a href="mailto:contact@ecole-de-lengagement.fr">Donner un cours</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>Suivre</h4>
       <ul>
         <li><a href="https://www.facebook.com/share/1A79DbhSu8/" target="_blank" rel="noopener">Facebook</a></li>
-        <li><a href="#" target="_blank" rel="noopener">Twitter / X</a></li>
-        <li><a href="#" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://www.instagram.com/ecole_engagement/" target="_blank" rel="noopener">Instagram</a></li>
         <li><a href="mailto:contact@ecole-de-lengagement.fr">Nous écrire</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
     <span>© 2026 École de l'engagement — Tous droits réservés</span>
-    <span>Mentions légales · Politique de confidentialité</span>
   </div>
 </footer>
 
