@@ -25,6 +25,14 @@ yarn-error.log*
 Thumbs.db
 desktop.ini
 
+# Outils IA (local)
+.agents/
+.claude/
+skills-lock.json
+
+# Archives / notes internes
+wordpress/
+
 # Éditeurs
 .vscode/
 .idea/
